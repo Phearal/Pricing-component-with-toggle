@@ -1,0 +1,232 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+    list-style: none;
+    z-index: 10;
+}
+button:focus { outline: none; }
+body {
+    background-color: hsl(240, 78%, 98%);
+}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header div {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    justify-content: space-between;
+    align-items: center;
+}
+#switchbg {
+    width: 70px;
+    height: 40px;
+    border: none;
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border-radius: 50px;
+}
+#switchbg span {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 100%;
+}
+#imgtop {
+    position: absolute;
+    display: block;
+    top: 0px;
+    right: 0px;
+    z-index: 0;
+}
+#imgbottom {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 0;
+}
+main {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+main nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+main nav ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 360px;
+}
+.prixcenter {
+    background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    padding: 40px 0px;
+    border-radius: 10px;
+}
+.prixdroit {
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 20px 0px;
+}
+.prixgauche {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 20px 0px;
+}
+.prixgauche, .prixdroit {
+    background-color: #fff;
+}
+.buttoncenter {
+    background-color: #fff;
+    border: 1px solid white;
+    width: 300px;
+    height: 50px;
+    color: hsl(237, 63%, 64%);
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 40px;
+}
+.buttoncenter:hover {
+    color: #fff;
+    background-color: unset;
+}
+.buttonborder {
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    width: 301px;
+    height: 51px;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 40px;
+}
+.buttonborder:hover {
+    color: hsl(237, 63%, 64%);
+    background: unset;
+    background-color: #fff;
+    border: 1px solid hsl(232, 13%, 33%);
+    width: 300px;
+    height: 50px;
+}
+h1 {
+    font-size: 2em;
+    color: hsl(233, 13%, 49%);
+    margin: 50px 0px 30px 0px;
+}
+h2 {
+    font-size: 1.2em;
+    color: hsl(232, 13%, 33%);
+}
+h3 {
+    font-size: 5em;
+    color: hsl(232, 13%, 33%);
+    margin-bottom: 40px;
+}
+h3::first-letter {
+    font-size: 0.5em;
+    vertical-align: 30%;
+}
+p {
+    padding: 20px 0px;
+}
+li p {
+    width: 300px;
+    text-align: center;
+    color: hsl(232, 13%, 33%);
+}
+li :nth-child(3), li :nth-child(5) {
+    border-top: 1px solid hsl(234, 14%, 74%);
+    border-bottom: 1px solid hsl(234, 14%, 74%);
+}
+.prixcenter h1, .prixcenter h2, .prixcenter h3, .prixcenter p {
+    color: #fff;
+}
+.prixcenter :nth-child(4), .prixcenter :nth-child(6) {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid#fff;
+}
+header h2 {
+    color: hsl(234, 14%, 74%);
+    font-size: 1em;
+    font-weight: 600;
+}
+.attribution {
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+/* SLIDER */
+/* The switch - the box around the slider */
+header label {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  header label input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  @media (max-width: 1100px) {
+    main nav ul {
+        flex-direction: column;
+    }
+    main nav ul li {
+        border-radius: 10px;
+        margin-bottom: 50px;
+    }
+    .attribution {
+        margin: 0px 0px 50px 0px;
+    }
+  }
